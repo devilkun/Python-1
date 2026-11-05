@@ -26,7 +26,7 @@ def enter_number(p1_sign, p2_sign):
     global switch
     global j
     k = 9
-    while (j):
+    while j:
         if k == 0:
             break
 
@@ -76,29 +76,21 @@ def enter_number(p1_sign, p2_sign):
 
 def checkwin():
     if board[1] == board[2] == board[3]:
-
         return 1
     elif board[4] == board[5] == board[6]:
-
         return 1
     elif board[7] == board[8] == board[9]:
-
         return 1
     elif board[1] == board[4] == board[7]:
-
         return 1
 
     elif board[2] == board[5] == board[8]:
-
         return 1
     elif board[3] == board[6] == board[9]:
-
         return 1
     elif board[1] == board[5] == board[9]:
-
         return 1
     elif board[3] == board[5] == board[7]:
-
         return 1
     else:
         print("\n\nGame continue")

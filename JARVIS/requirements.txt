@@ -1,0 +1,8 @@
+openai
+SpeechRecognition
+PyAudio
+pywin32
+pyttsx3
+gTTS
+playsound==1.2.2
+

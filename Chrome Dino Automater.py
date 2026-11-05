@@ -1,5 +1,6 @@
 import pyautogui  # pip install pyautogui
-from PIL import Image, ImageGrab  # pip install pillow
+from PIL import ImageGrab  # pip install pillow
+
 # from numpy import asarray
 import time
 
@@ -10,7 +11,6 @@ def hit(key):
 
 
 def isCollide(data):
-
     # for cactus
     for i in range(329, 425):
         for j in range(550, 650):
@@ -34,7 +34,7 @@ if __name__ == "__main__":
     # hit('up')
 
     while True:
-        image = ImageGrab.grab().convert('L')
+        image = ImageGrab.grab().convert("L")
         data = image.load()
         isCollide(data)
 

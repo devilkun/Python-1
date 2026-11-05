@@ -7,11 +7,11 @@ def main():
     while True:
         try:
             x = float((input("Enter a number between 0 and 1: ")))
-            if (0 < x and x < 1):
+            if 0 < x and x < 1:
                 break
             else:
                 print("Please enter correct number")
-        except Exception as e:
+        except Exception:
             print("Please enter correct number")
 
     for i in range(10):
@@ -19,5 +19,5 @@ def main():
         print(x)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

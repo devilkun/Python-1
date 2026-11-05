@@ -1,5 +1,4 @@
 from __future__ import print_function
-
 import os
 import sqlite3 as lite
 import sys
@@ -13,25 +12,23 @@ import sys
 # Description	: Runs checks to check my SQLITE database
 
 dropbox = os.getenv("dropbox")
-dbfile = ("Databases\jarvis.db")
+dbfile = r"Databases\jarvis.db"
 master_db = os.path.join(dropbox, dbfile)
 con = None
 
 try:
     con = lite.connect(master_db)
     cur = con.cursor()
-    cur.execute('SELECT SQLITE_VERSION()')
+    cur.execute("SELECT SQLITE_VERSION()")
     data = cur.fetchone()
     print("SQLite version: %s" % data)
 
 
 except lite.Error as e:
-
     print("Error %s:" % e.args[0])
     sys.exit(1)
 
 finally:
-
     if con:
         con.close()
 

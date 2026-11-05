@@ -1,6 +1,7 @@
 import string
 from random import randint
 
+
 def decrypt():
     texto = input("Input the text to decrypt : ").split(".")
     abecedario = string.printable + "áéíóúÁÉÍÚÓàèìòùÀÈÌÒÙäëïöüÄËÏÖÜñÑ´"
@@ -34,8 +35,8 @@ def decrypt():
 
     print(textofin)
 
-def encrypt():
 
+def encrypt():
     texto = input("Input the text to encrypt : ")
     abecedario = string.printable + "áéíóúÁÉÍÚÓàèìòùÀÈÌÒÙäëïöüÄËÏÖÜñÑ´"
     abecedario2 = []
@@ -69,7 +70,8 @@ def encrypt():
 
     fintext = str(nummoves) + "." + fintext
 
-    print("\Encrypted text : " + fintext)
+    print(r"\Encrypted text : " + fintext)
+
 
 sel = input("What would you want to do?\n\n[1] Encrypt\n[2] Decrypt\n\n> ").lower()
 

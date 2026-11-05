@@ -39,7 +39,7 @@ class Circular_Linked_List:
     def Display(self):
         temp = self.head
         if self.head is not None:
-            while(temp):
+            while temp:
                 print(temp.data, "->", end=" ")
                 temp = temp.next
                 if temp == self.head:
@@ -48,7 +48,6 @@ class Circular_Linked_List:
 
 
 if __name__ == "__main__":
-
     L_list = Circular_Linked_List()
     head1 = Circular_Linked_List()
     head2 = Circular_Linked_List()

@@ -3,6 +3,7 @@ Created on Sat Jul 15 01:41:31 2017
 
 @author: Albert
 """
+
 from __future__ import print_function
 
 import wikipedia as wk
@@ -10,9 +11,9 @@ from bs4 import BeautifulSoup
 
 
 def wiki():
-    '''
+    """
     Search Anything in wikipedia
-    '''
+    """
 
     word = input("Wikipedia Search : ")
     results = wk.search(word)
@@ -30,7 +31,7 @@ def wiki():
     # references=page.references
     title = page.title
     # soup=BeautifulSoup(page.content,'lxml')
-    pageLength = input('''Wiki Page Type : 1.Full 2.Summary : ''')
+    pageLength = input("""Wiki Page Type : 1.Full 2.Summary : """)
     if pageLength == 1:
         soup = fullPage(page)
         print(soup)
@@ -45,15 +46,15 @@ def wiki():
 
 
 def fullPage(page):
-    soup = BeautifulSoup(page.content, 'lxml')
+    soup = BeautifulSoup(page.content, "lxml")
     return soup
 
 
 def randomWiki():
-    '''
+    """
     This function gives you a list of n number of random articles
     Choose any article.
-    '''
+    """
     number = input("No: of Random Pages : ")
     lst = wk.random(number)
     for i in enumerate(lst):
@@ -71,7 +72,7 @@ def randomWiki():
     # references=page.references
     title = page.title
     # soup=BeautifulSoup(page.content,'lxml')
-    pageLength = input('''Wiki Page Type : 1.Full 2.Summary : ''')
+    pageLength = input("""Wiki Page Type : 1.Full 2.Summary : """)
     if pageLength == 1:
         soup = fullPage(page)
         print(soup)
@@ -83,6 +84,7 @@ def randomWiki():
     # print "References : ",references
 
     pass
+
 
 # if __name__=="__main__":
 #    wiki()
